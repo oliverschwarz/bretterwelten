@@ -1,6 +1,7 @@
 {
   "name": "Bretterwelten",
   "version": "0.1.0",
+  "description": "A simple and minimalistic Wordpress theme for the bretterwelten.de web site",
   "author": "Oliver Schwarz",
   "devDependencies": {
     "grunt": "^1.0.1",
