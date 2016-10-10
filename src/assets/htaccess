@@ -16,12 +16,18 @@ Header set x-xss-protection "1; mode=block"
 # Enforce https/443
 <IfModule mod_rewrite.c>
 
-    RewriteEngine On
+  RewriteEngine On
+  RewriteBase /
 
-    # RewriteCond %{SERVER_PORT} !^443$ [NC]
-    # RewriteRule ^(.*)$ https://bretterwelten.de/$1 [r=301,L]
+  RewriteCond %{SERVER_PORT} !^443$ [NC]
+  RewriteRule ^(.*)$ https://bretterwelten.de/$1 [r=301,L]
 
-    RewriteCond %{HTTP_HOST} ^www\.bretterwelten\.de$ [NC]
-    RewriteRule ^(.*)$ http://bretterwelten.de/$1 [r=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.bretterwelten\.de$ [NC]
+  RewriteRule ^(.*)$ https://bretterwelten.de/$1 [r=301,L]
+
+  RewriteRule ^index\.php$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.php [L]
 
 </IfModule>
