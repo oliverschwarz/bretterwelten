@@ -63,4 +63,78 @@ if (!function_exists('bw_setup')) {
   // Apply setup to theme handler
   add_action('after_setup_theme', 'bw_setup');
 
-} // end if function_exists
+} // end if !function_exists bw_setup
+
+// Open Graph stuff
+if (!function_exists('bw_open_graph')) {
+
+  /**
+  * Bretterwelten Open Graph
+  * 
+  * A simple function to add open graph elements to the
+  * head of each page.
+  *
+  * @return void
+  */
+  function bw_open_graph()
+  {
+    // As ugly as it is: Get actual post
+    global $post;
+
+    // Fallback image
+    $fallback_image_url = 'https://bretterwelten.de/wp-content/uploads/2016/10/29811861810_dedde9d745_o.jpg';
+
+    // Check page status and add og
+    if (is_front_page()) {
+
+      $url = get_bloginfo('url');
+      $title = esc_attr(get_bloginfo('name'));
+      $description = esc_attr(get_bloginfo('description'));
+
+      $output = <<<opengraph
+
+  <!-- open graph data -->
+  <meta name="twitter:card" value="summary">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{$url}">
+  <meta property="og:title" content="{$title}">
+  <meta property="og:image" content="{$fallback_image_url}">
+  <meta property="og:description" content="Ein Blog &uuml;ber Brettspiele und Spieleabende">
+
+opengraph;
+      echo $output;
+
+    } elseif (is_singular()) {
+      
+      $url = get_permalink();
+      $title = esc_attr(get_the_title());
+      $description = esc_attr(get_the_excerpt());
+      $image = $fallback_image_url;
+
+      if (has_post_thumbnail($post->ID)) {
+        $kb_thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+        $image = esc_attr($kb_thumbnail[0]);
+      }
+
+      $output = <<<opengraph
+
+  <!-- open graph data -->
+  <meta name="twitter:card" value="summary">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{$url}">
+  <meta property="og:title" content="{$title}">
+  <meta property="og:title" content="{$image}">
+  <meta property="og:description" content="{$description}">
+
+opengraph;
+      echo $output;
+
+    }
+
+
+  }
+
+  // Apply open graph to head
+  add_action('wp_head', 'bw_open_graph');
+
+} // end if !function_exists bw_open_graph
