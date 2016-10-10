@@ -19,8 +19,7 @@
 
     wp_title('&laquo;', true, 'right');
     bloginfo('name');
-    echo ' &raquo; ';
-    bloginfo('description');
+    echo ' &raquo; Ein Blog &uuml;ber Brettspiele';
 
 ?></title>
 
@@ -90,6 +89,12 @@
       <h3>Themen</h3>
       <ul>
         <?php wp_list_categories('title_li='); ?>
+      </ul>
+    </li>
+    <li class="cf">
+      <h3>Archiv</h3>
+      <ul>
+        <?php wp_get_archives('title_li='); ?>
       </ul>
     </li>
   </ul>
