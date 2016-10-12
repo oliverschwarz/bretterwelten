@@ -82,7 +82,7 @@
     <li class="cf">
       <h3>Blogroll</h3>
       <ul>
-        <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
+        <?php wp_list_bookmarks('title_li=&categorize=0&category=2'); ?>
       </ul>
     </li>
     <li class="cf">
