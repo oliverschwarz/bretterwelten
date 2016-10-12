@@ -11,8 +11,12 @@ Tags: lightweight, responsive, minimalistic, one-column
 Text Domain: Bretterwelten
 */
 body {
-  font: 100%/1.4 serif;
+  font: 100%/1.4 Georgia, serif;
   margin: 0 2em;
+}
+
+h1 {
+  font-weight: normal;
 }
 
 header h2 {
@@ -33,6 +37,17 @@ aside li li {
   float: left;
   margin: 0 1em 0 0;
   padding: 0;
+}
+
+/* Global link settings */
+a {
+  color: #003638;
+}
+a:hover {
+  color: #647d7c;
+}
+a:visited {
+  color: #869f9e;
 }
 
 /* micro-clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
