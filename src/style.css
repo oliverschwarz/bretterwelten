@@ -12,9 +12,33 @@ Text Domain: Bretterwelten
 */
 body {
   font: 100%/1.4 Georgia, serif;
-  margin: 0 2em;
+  margin: 0;
 }
 
+/* Centered column style and padding */
+header {
+  background-color: #354653;
+  padding: 1em 2em;
+}
+
+header h1 a, header h1 a:visited {
+  color: #6788A1;
+  text-decoration: none;
+}
+
+main, aside, footer {
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+hr {
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  height: 10px;
+  margin: 0;
+}
+
+/* Headlines */
 h1 {
   font-weight: normal;
 }
@@ -24,6 +48,33 @@ header h2 {
   font-size: 1.25em;
   font-style: italic;
   font-weight: normal;
+}
+
+/* Article */
+article {
+  margin-bottom: 3em;
+  line-height: 1.7;
+}
+
+article h1 {
+  margin-bottom: 0;
+}
+
+article .meta {
+  color: #ABABAB;
+  font-size: .8em;
+}
+
+article h2 {
+  color: #7A694E;
+}
+
+/* Aside-only settings */
+aside {
+  margin-bottom: 1.5em;
+}
+aside h3 {
+  color: #544D36;
 }
 
 aside ul {
@@ -41,13 +92,13 @@ aside li li {
 
 /* Global link settings */
 a {
-  color: #003638;
+  color: #4E677A;
 }
 a:hover {
-  color: #647d7c;
+  color: #550000;
 }
 a:visited {
-  color: #869f9e;
+  color: #6788A1;
 }
 
 /* micro-clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
