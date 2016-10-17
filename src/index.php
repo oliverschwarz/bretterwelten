@@ -47,32 +47,11 @@
 
 <main>
 
-<?php while (have_posts()): the_post(); ?>
+<?php while (have_posts()): the_post();
 
-  <article id="<?php the_ID(); ?>" <?php post_class(); ?>>
-    <h1><a href="<?php the_permalink(); ?>" title="Artikel lesen: <?php the_title(); ?>"><?php the_title(); ?></a></h1>
-    <div class="meta">
-      <?php the_author(); ?> am
-      <time pubdate="<?php the_time('c'); ?>"><?php the_time('j. F Y'); ?></time>
-    </div>
+  get_template_part('content', get_post_format());
 
-<?php if (is_single() || is_page()): ?>
-
-    <div class="post-content">
-        <?php the_content(); ?>
-    </div>
-
-<?php else: ?>
-
-    <div class="excerpt">
-        <?php the_excerpt(); ?>
-    </div>
-
-<?php endif; ?>
-
-  </article>
-
-<?php endwhile; ?>
+endwhile; ?>
 
 </main>
 
