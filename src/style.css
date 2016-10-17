@@ -26,6 +26,10 @@ header h1 a, header h1 a:visited {
   text-decoration: none;
 }
 
+header h1 a:hover {
+  text-decoration: underline;
+}
+
 main, aside, footer {
   margin: 0 auto;
   padding: 0 2em;
@@ -71,7 +75,7 @@ article h2 {
 
 article blockquote {
   border-left: .5em solid #eee;
-  padding: 1em;
+  padding: 0 1em;
   font-style: italic;
 }
 
