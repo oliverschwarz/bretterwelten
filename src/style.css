@@ -69,6 +69,12 @@ article h2 {
   color: #7A694E;
 }
 
+article blockquote {
+  border-left: .5em solid #eee;
+  padding: 1em;
+  font-style: italic;
+}
+
 /* Aside-only settings */
 aside {
   margin-bottom: 1.5em;
