@@ -53,8 +53,9 @@ if (!function_exists('bw_setup')) {
     // Apply formats to theme
     if (function_exists('add_theme_support')) {
       add_theme_support('automatic-feed-links');
-      add_theme_support('post-thumbnails', array('post'));
-      add_theme_support('post-formats', array('gallery'));
+      add_theme_support('post-thumbnails');
+      add_theme_support('html5', 'search-form', 'comment-form', 'comment-list', 'caption');
+      add_theme_support('post-formats', array('gallery', 'quote', 'link', 'status'));
     }
     add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 
