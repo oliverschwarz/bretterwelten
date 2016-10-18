@@ -124,7 +124,7 @@ opengraph;
   <meta property="og:type" content="article">
   <meta property="og:url" content="{$url}">
   <meta property="og:title" content="{$title}">
-  <meta property="og:title" content="{$image}">
+  <meta property="og:image" content="{$image}">
   <meta property="og:description" content="{$description}">
 
 opengraph;
