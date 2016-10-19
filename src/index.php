@@ -2,11 +2,11 @@
 
 /**
  * Main index file
- * 
+ *
  * This is the main index file for the Wordpress engine.
  * Later on (according to the Wordpress template routing
  * rules) this file should never be called.
- * 
+ *
  * @package Bretterwelten
  */
 
@@ -23,6 +23,7 @@
 
 ?></title>
 
+  <meta name="description" content="Ein Blog &uuml;ber Brettspiele, Spieleabende, die Spielebranche, Spielregeln und gemütliches Zusammensein. Hier werden Spiele besprochen und diskutiert.">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0">
   <meta name="referrer" content="no-referrer">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
