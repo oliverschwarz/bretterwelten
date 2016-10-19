@@ -2,11 +2,11 @@
 
 /**
 * Theme library for custom functions
-* 
+*
 * This is the default theme library for customising Wordpress
 * from within a theme. All functions required to bring more or
 * custom functions to the Pistole theme, will go in here.
-* 
+*
 * @package    Wordpress
 * @subpackage Bretterwelten
 */
@@ -16,10 +16,10 @@ if (!function_exists('bw_setup')) {
 
   /**
   * Pistole theme setup
-  * 
+  *
   * Sets the default configuration and default actions when
   * the theme setup runs.
-  * 
+  *
   * @return void
   */
   function bw_setup()
@@ -30,6 +30,11 @@ if (!function_exists('bw_setup')) {
     remove_action('wp_head', 'wlwmanifest_link');
     remove_action('wp_head', 'rsd_link');
     remove_action('wp_head', 'wp_resource_hints');
+    remove_action('wp_head', 'rest_output_link_wp_head');
+    remove_action('wp_head', 'wp_oembed_add_discovery_links');
+
+    // Remove default cookie settings
+    remove_action('set_comment_cookies', 'wp_set_comment_cookies');
 
     // Remove emoji stuff
     remove_action('wp_head', 'print_emoji_detection_script', 7);
@@ -39,6 +44,7 @@ if (!function_exists('bw_setup')) {
     remove_filter('the_content_feed', 'wp_staticize_emoji');
     remove_filter('comment_text_rss', 'wp_staticize_emoji');
     remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+    add_filter('emoji_svg_url', '__return_false');
 
     // remove extended embed stuff
     remove_action('rest_api_init', 'wp_oembed_register_route');
@@ -71,7 +77,7 @@ if (!function_exists('bw_open_graph')) {
 
   /**
   * Bretterwelten Open Graph
-  * 
+  *
   * A simple function to add open graph elements to the
   * head of each page.
   *
@@ -106,7 +112,7 @@ opengraph;
       echo $output;
 
     } elseif (is_singular()) {
-      
+
       $url = get_permalink();
       $title = esc_attr(get_the_title());
       $description = esc_attr(get_the_excerpt());
