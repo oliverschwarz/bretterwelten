@@ -145,3 +145,33 @@ opengraph;
   add_action('wp_head', 'bw_open_graph');
 
 } // end if !function_exists bw_open_graph
+
+// Content page navigation
+if (!function_exists('bw_content_nav')) {
+
+  /**
+   * Content navigation / pager
+   *
+   * Simple content page navigation left (older) and right (younger).
+   *
+   * @return void
+   */
+   function bw_content_nav()
+   {
+     global $wp_query;
+     $next = get_next_posts_link('&#9668;');
+     $previous = get_previous_posts_link('&#9658;');
+     if ($wp_query->max_num_pages > 1) {
+         $output = <<<html
+<!-- PAGE NAVIGATION -->
+<section class="navbar clearfix">
+ <nav class="nav-page content">
+     <div class="nav-previous">{$previous}</div>
+     <div class="nav-next">{$next}</div>
+ </nav>
+</section>
+html;
+        echo $output;
+      }
+   }
+}

@@ -26,6 +26,8 @@ endwhile; ?>
 
 <?php endif; ?>
 
+<?php bw_content_nav(); ?>
+
 <hr>
 
 <?php get_sidebar(); ?>
