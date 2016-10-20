@@ -92,6 +92,30 @@ article blockquote {
   padding: 0 1em;
 }
 
+/* Single page navigation */
+.nav-page {
+  margin-top: 3em;
+}
+
+.nav-page a {
+  text-decoration: none;
+}
+
+.nav-page a:hover {
+  text-decoration: underline;
+}
+
+.nav-page .nav-next {
+  float: left;
+  width: 49%;
+}
+
+.nav-page .nav-previous {
+  float: right;
+  text-align: right;
+  width: 49%;
+}
+
 /* Aside-only settings */
 aside {
   margin-bottom: 1.5em;
