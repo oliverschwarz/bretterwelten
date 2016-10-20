@@ -149,6 +149,18 @@ a:visited {
   color: #6788A1;
 }
 
+/* footer */
+footer .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 2em 0;
+}
+
+footer .menu li {
+  float: left;
+  margin: 0 1em 0 0;
+}
+
 /* micro-clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .cf:before,
 .cf:after {
