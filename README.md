@@ -23,3 +23,12 @@ If you want to, you can fork this project or just copy from the code.
 
 * I spent extended time for the Wordpress setup function in ```functions.php``` to shut down all the unnecessary and unwanted stuff Wordpress fires up by default
 * I also took some time to prepare an exhausting lot of configuration in ```assets/htaccess```. Please note, that this is tailored to the options of my provider - it may not work at your site. However, it contains a lot of performance, security and data privacy-relevant configurations.
+
+## Changelog
+
+The first week went by with a lot of changes, but from now on (10/20/2016) I will keep a changelog of the things I will add or extend.
+
+### 2016-10-20
+
+* Simplified the open graph function ```bw_open_graph``` in ```src/functions.php```
+* Introduced single page and overview page navigation (simple: forward, backward)
