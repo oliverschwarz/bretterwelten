@@ -88,56 +88,42 @@ if (!function_exists('bw_open_graph')) {
     // As ugly as it is: Get actual post
     global $post;
 
-    // Fallback image
-    $fallback_image_url = 'https://bretterwelten.de/wp-content/uploads/2016/10/29811861810_dedde9d745_o.jpg';
+    // Set default values
+    $url = get_bloginfo('url');
+    $title = esc_attr(get_bloginfo('name'));
+    $description = 'Ein Blog &uuml;ber Brettspiele, Spielregeln, Spieleabende, die Brettspielbranche und alles, was dazugeh&ouml;rt';
+    $type = 'website';
+    $image = 'https://bretterwelten.de/wp-content/uploads/2016/10/29811861810_dedde9d745_o.jpg';
 
-    // Check page status and add og
-    if (is_front_page()) {
-
-      $url = get_bloginfo('url');
-      $title = esc_attr(get_bloginfo('name'));
-      $description = esc_attr(get_bloginfo('description'));
-
-      $output = <<<opengraph
-
-  <!-- open graph data -->
-  <meta name="twitter:card" value="summary">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{$url}">
-  <meta property="og:title" content="{$title}">
-  <meta property="og:image" content="{$fallback_image_url}">
-  <meta property="og:description" content="Ein Blog &uuml;ber Brettspiele und Spieleabende">
-
-opengraph;
-      echo $output;
-
-    } elseif (is_singular()) {
+    if (is_singular()) {
 
       $url = get_permalink();
       $title = esc_attr(get_the_title());
       $description = esc_attr(get_the_excerpt());
-      $image = $fallback_image_url;
+      $type = 'article';
 
+      // check for thumbnail
       if (has_post_thumbnail($post->ID)) {
         $kb_thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
         $image = esc_attr($kb_thumbnail[0]);
       }
 
-      $output = <<<opengraph
+    }
+
+    // Now generate output
+    $output = <<<opengraph
 
   <!-- open graph data -->
   <meta name="twitter:card" value="summary">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="{$type}">
   <meta property="og:url" content="{$url}">
   <meta property="og:title" content="{$title}">
   <meta property="og:image" content="{$image}">
   <meta property="og:description" content="{$description}">
 
 opengraph;
-      echo $output;
 
-    }
-
+    echo $output;
 
   }
 
