@@ -10,7 +10,7 @@ The website is *very* basic currently, only using the very rudimentary Wordpress
 
 * Implement commenting function again (currently offline)
 * Implement tagging and tag display
-* Draw/sketch a logo for the site and display it
+* ~~Draw/sketch a logo for the site and display it~~
 * Archive page
 * Category page
 * Activate search and implement search result page
