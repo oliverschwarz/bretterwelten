@@ -32,7 +32,9 @@
 <header role="banner">
 
     <hgroup>
-        <h1><a href="<?php bloginfo('url'); ?>">Bretterwelten</a></h1>
+        <div id="logo">
+          <h1><a href="<?php bloginfo('url'); ?>">Bretterwelten</a></h1>
+        </div>
         <h2><?php bloginfo('description'); ?></h2>
     </hgroup>
 
