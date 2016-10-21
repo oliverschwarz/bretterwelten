@@ -31,12 +31,24 @@
 
 <header role="banner">
 
+<?php if (is_single() || is_page()): ?>
+
+  <hgroup>
+      <div id="logo" class="single">
+        <h1><a href="<?php bloginfo('url'); ?>">Bretterwelten</a></h1>
+      </div>
+  </hgroup>
+
+<?php else: ?>
+
     <hgroup>
         <div id="logo">
           <h1><a href="<?php bloginfo('url'); ?>">Bretterwelten</a></h1>
         </div>
         <h2><?php bloginfo('description'); ?></h2>
     </hgroup>
+
+<?php endif; ?>
 
 </header>
 

@@ -19,15 +19,20 @@ body {
 header {
   background-color: #354653;
   padding: 1em 2em;
+  text-align: center;
 }
 
-header h1 a, header h1 a:visited {
-  color: #6788A1;
-  text-decoration: none;
-}
-
-header h1 a:hover {
-  text-decoration: underline;
+header h1 a {
+  background-image: url('https://bretterwelten.de/wp-content/themes/bretterwelten/logo-bretterwelten-05-optim.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: block;
+  width: 8em;
+  height: 5em;
+  text-indent: -999em;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main, aside, footer {
@@ -187,5 +192,22 @@ footer .menu li {
 @media (min-width: 667px) {
   body {
     font-size: 2em;
+  }
+  header {
+    text-align: left;
+  }
+  header h1 a {
+    width: 5em;
+    height: 3.5em;
+    text-indent: -999em;
+    border: 0;
+    margin-left: 0;
+  }
+  header .single h1 a {
+    width: 3em;
+    height: 2em;
+  }
+  header h2 {
+    font-size: .75em;
   }
 }

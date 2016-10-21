@@ -28,6 +28,10 @@ If you want to, you can fork this project or just copy from the code.
 
 The first week went by with a lot of changes, but from now on (10/20/2016) I will keep a changelog of the things I will add or extend.
 
+### 2016-10-21
+
+* Introducing a hand-made logo, sketched on the iPad and using it as headline / home link (I am not so comfortable with this, but that's how it is for the time being)
+
 ### 2016-10-20
 
 * Simplified the open graph function ```bw_open_graph``` in ```src/functions.php```
