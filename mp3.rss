@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:psc="http://podlove.org/simple-chapters" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:fh="http://purl.org/syndication/history/1.0" xmlns:podcast="https://podcastindex.org/namespace/1.0" >
+
+<channel>
+	<title>Bunte Schachteln</title>
+	<link>https://bretterwelten.de</link>
+	<description><![CDATA[Ein Podcast über Brettspiele]]></description>
+	<lastBuildDate>Mon, 19 Sep 2022 10:00:00 +0000</lastBuildDate>
+	<image><url>http://brettagoge.de/wp-content/uploads/2018/12/brettagoge-Logo-3000x3000.jpg</url><title>brettagoge</title><link>https://brettagoge.de</link></image>
+	<atom:link rel="self" type="application/rss+xml" title="brettagoge (https://brettagoge.podcaster.de/brettagoge.rss)" href="https://brettagoge.de/feed/mp3/" />
+	<atom:link rel="first" href="https://brettagoge.de/feed/mp3/" />
+	<language>de-DE</language><generator>Podlove Podcast Publisher v3.8.1</generator>
+	<copyright>© 2022 brettagoge</copyright>
+	<itunes:author>brettagoge</itunes:author>
+	<itunes:type>episodic</itunes:type>
+	<itunes:summary><![CDATA[Herr Graeff, Herr Kessler, Herr Noe und Herr Wagner sprechen über Brettspiele und die Hintergründe ihrer Themen. Wer beim nächsten Spieleabend mit Wissen glänzen können möchte, kann sich mit diesem Podcast ein wenig fortbilden oder einfach den Gesprächen lauschen.]]></itunes:summary>
+	<itunes:category text="Leisure"><itunes:category text="Games"></itunes:category></itunes:category>
+	<itunes:owner>
+		<itunes:name>brettagoge</itunes:name>
+		<itunes:email>info@brettagoge.de</itunes:email>
+	</itunes:owner>
+	<itunes:image href="http://brettagoge.de/wp-content/uploads/2018/12/brettagoge-Logo-3000x3000.jpg"/>
+	<itunes:subtitle>Das Podcast-Kollektiv rund um Brettspiele</itunes:subtitle>
+	<itunes:block>no</itunes:block>
+	<itunes:explicit>no</itunes:explicit>
+	<item>
+      <title>[#198] Die brettagogen-Tops des Spielejahrgangs 2022 - Sonderfolge</title>
+			<link>https://brettagoge.de/198-die-brettagogen-tops-des-spielejahrgangs-2022-sonderfolge/</link>
+			<pubDate>Thu, 01 Sep 2022 17:59:52 +0000</pubDate>
+			<guid isPermaLink="false">podlove-2022-08-31t18:06:14+00:00-db0403aa0204df1</guid>
+    	<description><![CDATA[Description]]></description>
+		</item>
+	</channel>
+</rss>
